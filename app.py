@@ -54,7 +54,7 @@ def inserir(ponto: PontoEntrada):
 def buscar_n_vizinhos(lat: float = Query(...), lon: float = Query(...), n: int = Query(1, ge=1)):
     _check_lib_loaded()
     
-    # Query point with dummy embedding/person_id (only lat/lon relevant for KD-Tree search)
+    # Query point
     query_reg = TReg(lat=lat, lon=lon,
                      embedding=(c_float * EMBEDDING_DIM)(*[0.0]*EMBEDDING_DIM),
                      person_id="query".encode('utf-8'))
