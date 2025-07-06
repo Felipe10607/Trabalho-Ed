@@ -221,11 +221,11 @@ void hash_apaga(thash *h) {
     h->size = 0;     //o contador de elementos
 }
 
-// --- Funções para leitura do arquivo CSV de CEPs  ---
+// --- Funções para leitura do arquivo CSV  ---
 #define MAX_LINE_LENGTH 256
 #define MAX_FIELD_LENGTH 100
 
-// Função para carregar dados de CEP de um arquivo CSV na tabela hash
+// Função para carregar dados de CEP
 int load_ceps_from_csv(thash *h, const char *filename) {
     FILE *file = fopen(filename, "r");
     if (!file) {
